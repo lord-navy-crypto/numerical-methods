@@ -1,0 +1,15 @@
+{
+  "schema": "numerical-error-studio-config-v2",
+  "app_version": "1.2.0",
+  "method_label": "Range-reduced Taylor (recommended)",
+  "dtype": "float64",
+  "reference_label": "mpmath arbitrary precision (recommended)",
+  "reference_precision_digits": 80,
+  "tolerance_multiplier": 8.0,
+  "max_terms": 120,
+  "x_min": -80.0,
+  "x_max": 80.0,
+  "scan_points": 1000,
+  "single_x": 1.5707963267948966,
+  "convergence_terms": 50
+}

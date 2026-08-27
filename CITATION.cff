@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this educational software, please cite the repository."
+title: "Numerical Error Analysis Studio"
+type: software
+authors:
+  - family-names: "Jason"
+version: 1.2.0
+date-released: 2026-08-27
+license: MIT
+repository-code: "https://github.com/OWNER/numerical-error-analysis-studio"
+abstract: "An interactive laboratory for Taylor-series evaluation, floating-point error, range reduction, cancellation, and false convergence."
+keywords:
+  - numerical analysis
+  - floating-point arithmetic
+  - Taylor series
+  - error analysis
+  - education

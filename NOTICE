@@ -1,0 +1,18 @@
+Numerical Error Analysis Studio
+Copyright (c) 2026 Jason and contributors
+
+The project-authored source code and documentation in this repository are
+licensed under the MIT License in LICENSE.
+
+This project depends on separately distributed third-party software, including
+NumPy, mpmath, Pandas, Plotly, Streamlit, and pytest. Those projects retain
+their own copyright notices, license terms, trademarks, and distribution
+conditions. Installing dependencies does not transfer their ownership to this
+project, and the MIT License in this repository does not replace their licenses.
+
+No source code from Project Chrono, Spectra, NumPy, mpmath, Pandas, Plotly,
+Streamlit, or pytest is copied into this repository. Package names are used
+only to identify interoperability and runtime dependencies.
+
+The original educational experiment was authored in jason_codes.ipynb. This
+repository is its organized, tested, and documented continuation.
