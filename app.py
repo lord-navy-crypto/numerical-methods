@@ -241,7 +241,7 @@ st.markdown(
 )
 
 with st.sidebar:
-    st.header("Experiment configuration")
+    st.header("1 · Setup")
     load_uploaded_config(st.file_uploader("Import configuration", type=["json"]))
     st.selectbox("Method", list(METHOD_LABELS), key="method_label")
     st.selectbox("Floating-point precision", ["float64", "float32"], key="dtype")
@@ -280,8 +280,10 @@ with st.sidebar:
         st.session_state.comparison_result = None
         st.rerun()
 
+st.caption("Workspace order: Setup → Run → Results → Analysis → Verification / Export.")
+
 overview_tab, scan_tab, single_tab, comparison_tab, validation_tab = st.tabs(
-    ["Overview", "Parameter scan", "Single-point analysis", "Method comparison", "Validation"]
+    ["1 · Overview", "2 · Run — Parameter scan", "3 · Results — Single point", "4 · Analysis — Method comparison", "5 · Verification"]
 )
 
 with overview_tab:
