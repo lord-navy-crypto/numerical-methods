@@ -242,6 +242,23 @@ st.markdown(
 
 with st.sidebar:
     st.header("1 · Setup")
+    with st.expander("Quick setup handoff · no file transfer", expanded=False):
+        st.caption("Pin the current numerical experiment settings inside this session. Restore them in one click after trying another method; no JSON export or external app is needed.")
+        if st.button("Pin current setup", key="pin_numerical_setup"):
+            st.session_state["_pinned_numerical_setup"] = {
+                key: st.session_state[key] for key in default_config()
+            }
+            st.success("Settings pinned in this session.")
+        pinned = st.session_state.get("_pinned_numerical_setup")
+        if isinstance(pinned, dict):
+            st.caption(f"Pinned {len(pinned)} input values. Restore clears stale scan and comparison results.")
+            if st.button("Restore pinned setup", key="restore_numerical_setup"):
+                for key in default_config():
+                    if key in pinned:
+                        st.session_state[key] = pinned[key]
+                st.session_state["scan_result"] = None
+                st.session_state["comparison_result"] = None
+                st.rerun()
     load_uploaded_config(st.file_uploader("Import configuration", type=["json"]))
     st.selectbox("Method", list(METHOD_LABELS), key="method_label")
     st.selectbox("Floating-point precision", ["float64", "float32"], key="dtype")
